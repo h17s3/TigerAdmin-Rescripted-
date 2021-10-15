@@ -1,0 +1,208 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Drag = Instance.new("Frame")
+local Top = Instance.new("Frame")
+local Blue = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local Bottem = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Start = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIGradient_2 = Instance.new("UIGradient")
+local dot1 = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local dot3 = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local dot2 = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+
+
+ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Drag.Name = "Drag"
+Drag.Parent = ScreenGui
+Drag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Drag.BackgroundTransparency = 1.000
+Drag.Position = UDim2.new(0.213592231, 0, 0.139837399, 0)
+Drag.Size = UDim2.new(0, 203, 0, 376)
+
+Top.Name = "Top"
+Top.Parent = Drag
+Top.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+Top.BorderSizePixel = 0
+Top.Position = UDim2.new(0.00305716973, 0, 0.601335585, 0)
+Top.Size = UDim2.new(0, 201, 0, 106)
+
+Blue.Name = "Blue"
+Blue.Parent = Top
+Blue.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Blue.Position = UDim2.new(-0.00193121517, 0, -2.01607132, 0)
+Blue.Size = UDim2.new(0, 203, 0, 248)
+
+UICorner.Parent = Blue
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(15, 255, 247)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(13, 80, 83))}
+UIGradient.Rotation = 70
+UIGradient.Parent = Blue
+
+ImageLabel.Parent = Blue
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.0886699483, 0, 0.169354826, 0)
+ImageLabel.Size = UDim2.new(0, 166, 0, 163)
+ImageLabel.Image = "rbxassetid://279461710"
+
+TextLabel.Parent = Blue
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0886699483, 0, 0.858870983, 0)
+TextLabel.Size = UDim2.new(0, 166, 0, 23)
+
+local Numbers = {}
+local numbersgot = 0
+for i = 1,20 do
+	table.insert(Numbers,math.random(2,9))
+end
+for _,v in pairs(Numbers) do
+	if v then
+		numbersgot = numbersgot +v
+		numbersgot = numbersgot +math.random(100,9999999)
+	end
+end
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "ID: "..numbersgot
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+Bottem.Name = "Bottem"
+Bottem.Parent = Top
+Bottem.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+Bottem.BorderSizePixel = 0
+Bottem.Position = UDim2.new(0, 0, 0.90453583, 0)
+Bottem.Size = UDim2.new(0, 201, 0, 41)
+
+UICorner_2.Parent = Bottem
+
+Start.Name = "Start"
+Start.Parent = Top
+Start.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Start.BorderSizePixel = 0
+Start.Position = UDim2.new(0.203980088, 0, 0.641509414, 0)
+Start.Size = UDim2.new(0, 119, 0, 27)
+Start.Font = Enum.Font.SourceSans
+Start.Text = "Start"
+Start.TextColor3 = Color3.fromRGB(255, 255, 255)
+Start.TextScaled = true
+Start.TextSize = 14.000
+Start.TextStrokeTransparency = 0.760
+Start.TextWrapped = true
+
+UICorner_3.Parent = Start
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(49, 252, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(34, 183, 185))}
+UIGradient_2.Parent = Start
+
+dot1.Name = "dot1"
+dot1.Parent = Start
+dot1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dot1.Position = UDim2.new(0.285714269, 0, 0.259259224, 0)
+dot1.Size = UDim2.new(0, 11, 0, 12)
+dot1.Visible = false
+
+UICorner_4.CornerRadius = UDim.new(0, 6565656)
+UICorner_4.Parent = dot1
+
+dot3.Name = "dot 3"
+dot3.Parent = Start
+dot3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dot3.Position = UDim2.new(0.453781486, 0, 0.259259224, 0)
+dot3.Size = UDim2.new(0, 11, 0, 12)
+dot3.Visible = false
+
+UICorner_5.CornerRadius = UDim.new(0, 6565656)
+UICorner_5.Parent = dot3
+
+dot2.Name = "dot 2"
+dot2.Parent = Start
+dot2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dot2.Position = UDim2.new(0.647058785, 0, 0.259259224, 0)
+dot2.Size = UDim2.new(0, 11, 0, 12)
+dot2.Visible = false
+
+UICorner_6.CornerRadius = UDim.new(0, 6565656)
+UICorner_6.Parent = dot2
+
+local Dots = {dot1, dot2, dot3}
+STT = 0
+ST = false
+function DragP(v)
+	local UserInputService = game:GetService("UserInputService")
+
+	local gui = v
+
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+DragP(Drag)
+Start.MouseButton1Click:Connect(function()
+	if ST == false then
+		ST = true
+		Start.Text = " "
+		for _,v in pairs(Dots) do
+			v.Visible = true
+		end
+		while wait(.1) do
+			if STT <2 then
+				STT = STT +1
+				for _,v in pairs(Dots) do
+					v:TweenPosition(v.Position + UDim2.new(0, 0,0.3, 0),"Out","Quart",.5)
+					wait(.6)
+					v:TweenPosition(v.Position - UDim2.new(0, 0,0.3, 0),"Out","Quart",.5)
+				end
+			else
+				wait(.8)
+				Drag:TweenPosition(UDim2.new(-5,0,-322),"Out","Quart",88)
+				wait(1)
+				ScreenGui:Destroy()
+				break
+				
+			end
+		end
+	end
+end)
